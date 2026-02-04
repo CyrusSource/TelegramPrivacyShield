@@ -4,8 +4,7 @@ A Telegram bot that protects users' privacy by anonymously reposting messages in
 ---
 
 ## English Version
-A Telegram bot that protects users' privacy by anonymously reposting messages in groups. Open-source and easy to deploy.
-Perfect for sensitive groups while keeping users' identities private.
+TelegramPrivacyShield is a Telegram bot that protects users' privacy by remove user messages and anonymously reposting that messages in groups. Open-source and easy to deploy. Perfect for sensitive groups while keeping users' identities private.
 
 ### Features
 - Automatically delete messages in groups
@@ -31,32 +30,3 @@ https://yourserver.com/index.php
 
 #### Group
 /getChatID – Get numeric ID of the group (the message will be deleted)
-
-## ورژن فارسی
-این ربات پیام‌های کاربران را در گروه حذف کرده و بدون نمایش هویت واقعی دوباره منتشر می‌کند. مناسب برای گروه‌های حساس و حفظ حریم خصوصی.
-
-## ویژگی‌ها
-
-- حذف خودکار پیام‌های کاربران در گروه
-- انتشار مجدد پیام بدون نمایش هویت واقعی
-- بدون ذخیره اطلاعات کاربران
-- متن‌باز و قابل بررسی
-- مناسب برای شرایط حساس
-
-## دستورالعمل نصب
-
-1. ربات را با BotFather (https://t.me/BotFather) بسازید و **توکن** را دریافت کنید.
-2. فایل `index.php` را با **توکن** و **آیدی ربات** به‌روز کنید.
-3. ربات را به عنوان ادمین به گروه اضافه کنید و دسترسی حذف پیام‌ها را بدهید.
-4. Webhook را به مسیر سرور خود متصل کنید:
-
-```bash
-https://yourserver.com/yourbot.php
-```
-## دستورات
-### در چت خصوصی
-/start – نمایش منو و اطلاعات ربات
-/sendto @GroupID متن پیام – ارسال پیام ناشناس به گروه
-
-### در گروه
-/getChatID – دریافت آیدی عددی گروه (پیام حذف خواهد شد)
