@@ -24,6 +24,14 @@ Perfect for sensitive groups while keeping users' identities private.
 https://yourserver.com/index.php
 ```
 
+### Commands
+#### Private Chat
+/start – Show bot menu and info
+/sendto @GroupID Message – Send anonymous message to a group
+
+#### Group
+/getChatID – Get numeric ID of the group (the message will be deleted)
+
 ## ورژن فارسی
 این ربات پیام‌های کاربران را در گروه حذف کرده و بدون نمایش هویت واقعی دوباره منتشر می‌کند. مناسب برای گروه‌های حساس و حفظ حریم خصوصی.
 
@@ -44,3 +52,11 @@ https://yourserver.com/index.php
 
 ```bash
 https://yourserver.com/yourbot.php
+```
+## دستورات
+### در چت خصوصی
+/start – نمایش منو و اطلاعات ربات
+/sendto @GroupID متن پیام – ارسال پیام ناشناس به گروه
+
+### در گروه
+/getChatID – دریافت آیدی عددی گروه (پیام حذف خواهد شد)
