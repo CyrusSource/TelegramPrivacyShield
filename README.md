@@ -1,4 +1,5 @@
 # TelegramPrivacyShield
+**For Persian version, see [README_FA.md](README_FA.md).**
 A Telegram bot that protects users' privacy by anonymously reposting messages in groups. Open-source and easy to deploy.
 
 ---
