@@ -356,6 +356,7 @@ if (isset($msg["new_chat_members"])) {
                     "• You can even prevent its display with this system!\n\n" .
                     "<blockquote expandable>⚙️ Bot features for admins:\n\n" .
                     "• The bot only needs delete message permission.\n" .
+                    "• For better usability and spam prevention, enable Slow Mode." .
                     "• It's suggested to only use the official bot with ID [$botUsername] to maintain user security. You can check the main ID from Github too.\n" .
                     "• The group numeric ID should be available so users can send messages securely. This ID is visible by sending <code>/getChatID</code> in your private chat with the bot.\n" .
                     "• All messages are deleted, user security and privacy are the main priority, even your message will be deleted.\n" .
