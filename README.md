@@ -1,5 +1,4 @@
 # TelegramPrivacyShield
-ربات محافظ حریم خصوصی کاربران در تلگرام
 
 ---
 
@@ -22,6 +21,7 @@ Perfect for sensitive groups while keeping users' identities private.
 
 ```bash
 https://yourserver.com/index.php
+```
 
 ## ورژن فارسی
 این ربات پیام‌های کاربران را در گروه حذف کرده و بدون نمایش هویت واقعی دوباره منتشر می‌کند. مناسب برای گروه‌های حساس و حفظ حریم خصوصی.
