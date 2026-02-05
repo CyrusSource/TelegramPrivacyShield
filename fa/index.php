@@ -94,16 +94,30 @@ function editMessageText($chat_id, $message_id, $text, $markup = null)
  */
 function sendMedia($method, $chat_id, $file_id, $caption = null, $reply = null)
 {
-    $data = [
-        "chat_id" => $chat_id,
-        $method => $file_id
+    $data = ["chat_id" => $chat_id];
+
+    // تعیین پارامتر مناسب
+    $paramMap = [
+        "photo" => "photo",
+        "video" => "video",
+        "voice" => "voice",
+        "audio" => "audio",
+        "document" => "document"
     ];
-    if ($caption) {
+
+    if (!isset($paramMap[$method])) return false;
+
+    $data[$paramMap[$method]] = $file_id;
+
+    // فقط برای رسانه‌هایی که caption می‌گیرند
+    if ($caption && $method !== "voice") {
         $data["caption"] = $caption;
         $data["parse_mode"] = "HTML";
     }
+
     if ($reply) $data["reply_to_message_id"] = $reply;
-    request("send" . ucfirst($method), $data);
+
+    return request("send" . ucfirst($method), $data);
 }
 
 // ================== اطلاعات ربات ==================
@@ -436,10 +450,16 @@ $map = [
 // پردازش سایر انواع رسانه
 foreach ($map as $key => $label) {
     if (isset($msg[$key])) {
-        $file = is_array($msg[$key]) ? end($msg[$key])["file_id"] : $msg[$key]["file_id"];
+        $file_id = is_array($msg[$key]) && isset($msg[$key]["file_id"])
+                    ? $msg[$key]["file_id"]
+                    : end($msg[$key])["file_id"] ?? null;
+
+        if (!$file_id) continue; // اگر file_id موجود نبود رد شود
+
         $caption = "<blockquote>📎 $label ارسال شده توسط <b>$name</b></blockquote>";
         if (!empty($msg["caption"])) $caption .= "\n" . $msg["caption"];
-        sendMedia($key, $chat_id, $file, $caption, $reply);
+
+        sendMedia($key, $chat_id, $file_id, $caption, $reply);
         exit;
     }
 }
