@@ -19,14 +19,27 @@ TelegramPrivacyShield is a Telegram bot that protects users' privacy by remove u
 3. Add the bot to your group as **admin** and enable **Delete Messages** permission.
 4. Set up the webhook pointing to your server:
 
-```bash
-https://yourserver.com/index.php
+```text
+https://api.telegram.org/botTOKEN/setwebhook?url=DOMAIN
 ```
 
 ### Commands
 #### Private Chat
-/start – Show bot menu and info
-/sendto @GroupID Message – Send anonymous message to a group
+- /start – Show bot menu and info
+- /sendto @GroupID Message – Send anonymous message to a group
 
 #### Group
-/getChatID – Get numeric ID of the group (the message will be deleted)
+- /getChatID – Get numeric ID of the group (the message will be deleted)
+
+### Live Bot Preview & Evaluation
+To explore the real behavior and features of the bot, you can interact with its active Telegram version:
+- Bot ID:
+https://t.me/neghabrobot
+- Official CyrusCode Channel:
+https://t.me/CyrusCode
+- Testing & Evaluation Group:
+https://t.me/+Z9YAwto3Ve1iZDk0
+
+**Important Notice**
+The currently active bot on Telegram is developed entirely in Persian (Farsi).
+This GitHub repository does not provide a tested or live English version of the bot.
