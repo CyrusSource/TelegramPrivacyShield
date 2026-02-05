@@ -40,6 +40,6 @@ https://t.me/CyrusCode
 - Testing & Evaluation Group:
 https://t.me/+Z9YAwto3Ve1iZDk0
 
-**Important Notice**
+#### Important Notice
 The currently active bot on Telegram is developed entirely in Persian (Farsi).
 This GitHub repository does not provide a tested or live English version of the bot.
