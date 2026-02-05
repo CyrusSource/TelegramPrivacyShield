@@ -19,8 +19,8 @@
 3. ربات را به عنوان **ادمین** به گروه اضافه کنید و **دسترسی حذف پیام‌ها** را بدهید.
 4. Webhook را به مسیر سرور خود متصل کنید:
 
-```bash
-https://yourserver.com/yourbot.php
+```text
+https://api.telegram.org/botTOKEN/setwebhook?url=DOMAIN
 ```
 ## دستورات
 ### در چت خصوصی
