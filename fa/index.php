@@ -120,6 +120,20 @@ function sendMedia($method, $chat_id, $file_id, $caption = null, $reply = null)
     return request("send" . ucfirst($method), $data);
 }
 
+function sendOtherMedia($method, $chat_id, $file_id, $caption = null, $reply = null)
+{
+    $data = [
+        "chat_id" => $chat_id,
+        $method => $file_id
+    ];
+    if ($caption) {
+        $data["caption"] = $caption;
+        $data["parse_mode"] = "HTML";
+    }
+    if ($reply) $data["reply_to_message_id"] = $reply;
+    request("send" . ucfirst($method), $data);
+}
+
 // ================== اطلاعات ربات ==================
 
 /**
@@ -428,13 +442,13 @@ if (isset($msg["text"])) {
 
 // استیکر
 if (isset($msg["sticker"])) {
-    sendMedia("sticker", $chat_id, $msg["sticker"]["file_id"], null, $reply);
+    sendOtherMedia("sticker", $chat_id, $msg["sticker"]["file_id"], null, $reply);
     exit;
 }
 
 // گیف
 if (isset($msg["animation"])) {
-    sendMedia("animation", $chat_id, $msg["animation"]["file_id"], null, $reply);
+    sendOtherMedia("animation", $chat_id, $msg["animation"]["file_id"], null, $reply);
     exit;
 }
 
